@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular.io-example": {
+    "tutorial": {
       "projectType": "application",
       "root": "",
       "sourceRoot": "src",
@@ -12,7 +12,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist",
+            "outputPath": "docs",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -28,6 +28,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/angular_tutorial/",
               "budgets": [
                 {
                   "type": "initial",
@@ -43,6 +44,7 @@
               "outputHashing": "all"
             },
             "development": {
+              "baseHref": "/angular_tutorial/",
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
